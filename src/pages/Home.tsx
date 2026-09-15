@@ -14,6 +14,8 @@ type Workflow = {
   steps: WorkflowStep[];
 };
 
+const screenshot = (name: string) => `${import.meta.env.BASE_URL}screenshots/${name}`;
+
 const roleWorkflows: Record<Role, Workflow[]> = {
   ADMIN: [
     {
@@ -25,19 +27,19 @@ const roleWorkflows: Record<Role, Workflow[]> = {
           title: "User list",
           description:
             "View the users currently registered in the restaurant.",
-          image: "/screenshots/users_list.png",
+          image: screenshot("users_list.png"),
         },
         {
           title: "Create user",
           description:
             "Open the user form and enter the new user's details and role.",
-          image: "/screenshots/create_user.png",
+          image: screenshot("create_user.png"),
         },
         {
           title: "User created",
           description:
             "The new user appears in the user list and can now access the system.",
-          image: "/screenshots/users_list_updated.png",
+          image: screenshot("users_list_updated.png"),
         },
       ],
     },
@@ -51,24 +53,24 @@ const roleWorkflows: Record<Role, Workflow[]> = {
           title: "Categories",
           description:
             "View and manage the categories used to organize POS items.",
-          image: "/screenshots/inventory.png",
+          image: screenshot("inventory.png"),
         },
         {
           title: "Create category",
           description: "Add a new category",
-          image: "/screenshots/create_category.png"
+          image: screenshot("create_category.png"),
         },
         {
           title: "Manage item",
           description:
             "Add a new item or manage existing items and configure basic information.",
-          image: "/screenshots/manage_item.png",
+          image: screenshot("manage_item.png"),
         },
         {
           title: "Modifiers",
           description:
             "Configure modifiers and options that can be added to the items in this category.",
-          image: "/screenshots/manage_modifier.png",
+          image: screenshot("manage_modifier.png"),
         },
       ],
     },
@@ -82,19 +84,19 @@ const roleWorkflows: Record<Role, Workflow[]> = {
           title: "Current layout",
           description:
             "View the current arrangement of restaurant tables.",
-          image: "/screenshots/table_layout.png",
+          image: screenshot("table_layout.png"),
         },
         {
           title: "Edit layout",
           description:
             "Add, remove, and reposition tables to match the restaurant.",
-          image: "/screenshots/create_table.png",
+          image: screenshot("create_table.png"),
         },
         {
           title: "Updated layout",
           description:
             "The updated table layout is reflected in the POS.",
-          image: "/screenshots/table_layout_updated.png",
+          image: screenshot("table_layout_updated.png"),
         },
       ],
     },
@@ -108,19 +110,19 @@ const roleWorkflows: Record<Role, Workflow[]> = {
           title: "Order history",
           description:
             "View completed, cancelled, and other orders recorded in SPOS. Filters and sorting enabled",
-          image: "/screenshots/orders.png",
+          image: screenshot("orders.png"),
         },
         {
           title: "Order Timeline",
           description:
             "Review the details of an individual order.",
-          image: "/screenshots/orders_1.png",
+          image: screenshot("orders_1.png"),
         },
         {
           title: "Order Receipts",
           description:
             "Review the receipts of an individual order.",
-          image: "/screenshots/orders_2.png",
+          image: screenshot("orders_2.png"),
         },
       ],
     },
@@ -136,25 +138,25 @@ const roleWorkflows: Record<Role, Workflow[]> = {
           title: "Select table",
           description:
             "Choose the table for the new dine-in order.",
-          image: "/screenshots/dine_in_1.png",
+          image: screenshot("dine_in_1.png"),
         },
         {
           title: "POS Interface",
           description:
             "Pick the items from the category & related items",
-          image: "/screenshots/dine_in_2.png",
+          image: screenshot("dine_in_2.png"),
         },
         {
           title: "Add items",
           description:
             "Add items and modifiers to the customer's order",
-          image: "/screenshots/dine_in_3.png",
+          image: screenshot("dine_in_3.png"),
         },
         {
           title: "Review order",
           description:
             "Review the order before sending it to the kitchen/Complete transaction",
-          image: "/screenshots/dine_in_4.png",
+          image: screenshot("dine_in_4.png"),
         },
       ],
     },
@@ -168,13 +170,13 @@ const roleWorkflows: Record<Role, Workflow[]> = {
           title: "Takeaway State",
           description:
             "After payment, the order will be sent to the kitchen. You can view its progress",
-          image: "/screenshots/takeaway_1.png",
+          image: screenshot("takeaway_1.png"),
         },
         {
           title: "Complete Order",
           description:
             "Once order is received by the customer, you can complete it",
-          image: "/screenshots/takeaway_2.png",
+          image: screenshot("takeaway_2.png"),
         },
       ],
     },
@@ -188,7 +190,7 @@ const roleWorkflows: Record<Role, Workflow[]> = {
           title: "Payment screen",
           description:
             "Review the amount due and available payment methods.",
-          image: "/screenshots/pay_1.png",
+          image: screenshot("pay_1.png"),
         },
       ],
     },
@@ -202,7 +204,7 @@ const roleWorkflows: Record<Role, Workflow[]> = {
           title: "Printer settings",
           description:
             "Open the printer configuration from the POS settings. Configure the printer used for the required print jobs.",
-          image: "/screenshots/print.png",
+          image: screenshot("print.png"),
         },
       ],
     },
@@ -218,7 +220,7 @@ const roleWorkflows: Record<Role, Workflow[]> = {
           title: "Incoming tickets",
           description:
             "New orders sent from the POS appear as kitchen tickets.",
-          image: "/screenshots/kitchen.png",
+          image: screenshot("kitchen.png"),
         },
       ],
     },

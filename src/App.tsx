@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/spos-public">
       <div className="flex min-h-screen flex-col">
         <Navbar />
         
