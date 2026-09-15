@@ -84,7 +84,7 @@ const DevLog = () => {
 
         <div className="mt-10 flex justify-center">
           <img
-            src={`${import.meta.env.BASE_URL}/hld.png`}
+            src={`${import.meta.env.BASE_URL}hld.png`}
             alt="SPOS backend architecture diagram"
             className="h-full max-w-5xl"
           />
