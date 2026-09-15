@@ -1,3 +1,5 @@
+const screenshot = (name: string) => `${import.meta.env.BASE_URL}screenshots/${name}`;
+
 const DevLog = () => {
   return (
     <main>
@@ -84,7 +86,7 @@ const DevLog = () => {
 
         <div className="mt-10 flex justify-center">
           <img
-            src="/hld.png"
+            src={screenshot("hld.png")}
             alt="SPOS backend architecture diagram"
             className="h-full max-w-5xl"
           />
